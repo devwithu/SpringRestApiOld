@@ -1,0 +1,24 @@
+logging:
+  level:
+    root: warn
+    kr.jdj.api: info
+  #path: /home/ec2-user/api/log
+  file:
+    max-history: 7
+
+spring:
+  profiles: alpha
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/exam?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&useUnicode=true&autoReconnect=true&&allowMultiQueries=true&useSSL=false
+    username: jdj
+    password: jdj
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: none
+  url:
+    base: http://apiexam.jdj.kr
